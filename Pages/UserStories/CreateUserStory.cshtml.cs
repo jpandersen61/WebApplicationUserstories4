@@ -59,8 +59,6 @@ namespace WebApplicationUserstories4.Pages.UserStories
 
             UserStory.BusinessValue = AreChecked.Max();
 
-
-
             switch (Priority)
             {
                 case "meget vigtig":
@@ -79,6 +77,8 @@ namespace WebApplicationUserstories4.Pages.UserStories
                     UserStory.Priority = 4;
                     break;
             }
+
+            UserStory.StoryPoints = StoryPoint.ToString();
 
             _userStoryService.CreateUserStory(UserStory);
 
