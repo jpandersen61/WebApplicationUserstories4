@@ -13,7 +13,7 @@
             <h5 class="card-title">(@userstory.Id) @userstory.Title</h5>
         </div>
         <div class="card-body">
-            <p class="card-text">@userstory.Description</p>
+            <textarea asp-for="@userstory.Description" cols="120" class="form-control" ></textarea>
         </div>
         <div class="card-footer">
             <a class="btn" type="button" asp-page="DeleteUserStory" asp-route-id="@userstory.Id"><i class="fa fa-trash"></i></a>
@@ -40,6 +40,7 @@
                 </div>
                 <div class="modal-body">
                     <p><b>Description:</b> @Model.UserStory.Description</p>
+                    <p><textarea asp-for="@Model.UserStory.Description" cols="120" class="form-control" ></textarea></p>
                     <p><b>Business value:</b> @Model.UserStory.BusinessValue</p>
                     <p><b>Create date:</b> @Model.UserStory.CreationDate</p>
                     <p><b>Priority:</b> @Model.UserStory.Priority</p>

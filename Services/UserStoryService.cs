@@ -46,8 +46,14 @@ namespace WebApplicationUserstories.Services
             return userstoryToBeDeleted;
         }
 
+        public void CreateUserStory(UserStory userStory)
+        {
+            UserStory us = new UserStory(userStory.Title, userStory.Description, userStory.BusinessValue, userStory.Priority, userStory.StoryPoints);
+            userStories.Add(us);
+
+        }
+
+
     }
-
-
 
 }

@@ -5,6 +5,9 @@
 
 <h1>User Stories</h1>
 
+<p>
+    <a asp-page="CreateUserStory">Create New User Story</a>
+</p>
 
 @foreach (var userstory in @Model.UserStories)
 {
@@ -13,7 +16,7 @@
 <h5 class="card-title">(@userstory.Id) @userstory.Title</h5>
 </div>
 <div class="card-body">
-<p class="card-text">@userstory.Description</p>
+<textarea asp-for="@userstory.Description" cols="120" class="form-control" ></textarea>
 </div>
 <div class="card-footer">
 <a class="btn" type="button" asp-page="DeleteUserStory" asp-route-id="@userstory.Id"><i class="fa fa-trash"></i></a>
